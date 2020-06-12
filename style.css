@@ -1,0 +1,51 @@
+
+/* Style for heading elements */
+
+.fancy-header {
+  color: lightcoral;
+  text-decoration: underline;
+  text-align: center;
+  background-color:;
+}
+/*on my computer, this only centers on my chrome browser and not firefox*/
+li {
+  list-style-type: square
+
+}
+a:hover {
+  color: hotpink;
+}
+
+
+a {
+  color: blue;
+}
+
+body {
+
+  background-image: url("https://image.freepik.com/free-photo/partnership-business-man-shaking-hands-with-effect-digital-network-link-connection-graphic-diagram-digital-global-technology-with-cityscape-background_33829-157.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 1000px;
+  background-color: royalblue;
+  background-attachment: fixed;
+
+  font-family: "Courier New";
+  text-align: center;
+  list-style-type: square;
+
+
+
+}
+
+tr, td, th, table {
+
+  font-family: "Arial Black";
+  padding: 12px;
+  text-decoration-line: underline;
+  font-size: 10px;
+
+}
+/*
+Continue experimenting with styles to increase the visual appeal of the page.*/
+*/
