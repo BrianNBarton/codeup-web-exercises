@@ -9,11 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name) {
-  console.log("Hello, " + name +"!");
+const sayHello = function (name) {
+  return ("Hello, " + name +"!");
 }
 
-sayHello("codeup!");
+console.log(sayHello("codeup"));
 
 /**
  * TODO:
@@ -23,12 +23,9 @@ sayHello("codeup!");
  * console.log 'helloMessage' to check your work
  */
 
-
-
-
 sayHello("Brian")
 
-var helloMessage = sayHello("Brian")
+let helloMessage = sayHello("Brian")
 
 console.log(helloMessage);
 
@@ -40,7 +37,7 @@ console.log(helloMessage);
  */
 let myName = "Brian"
 
-sayHello(name)
+console.log(sayHello(myName))
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -65,13 +62,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(n) {
-  if (n === 2)
-    return true
+const isTwo = function(num) {
+  return n === 2;
 }
-isTwo(4)
-isTwo(2)
-isTwo(3)
+
+isTwo(random);
 
 /**
  * TODO:
@@ -80,16 +75,16 @@ isTwo(3)
  * bill, and return the amount to tip
  *
  * Examples:
- * > calculateTip(0.20, 20) // returns 4
- * > calculateTip(0.25, 25.50) // returns 6.37
- * > calculateTip(0.15, 33.42) // returns 5.013
+
  */
 
-
-function calculateTip(percent, bill) {
+const calculateTip = function(percent, bill)
+{
   return bill + bill * percent;
 }
-
+   calculateTip(0.20, 20) // returns 4
+  calculateTip(0.25, 25.50) // returns 6.37
+calculateTip(0.15, 33.42) // returns 5.013
 calculateTip(.25, 20);
 
 
@@ -102,12 +97,12 @@ calculateTip(.25, 20);
 
 let bill = prompt("your total bill is")
 
-let tip = prompt( "how much do you want to tip?")
+let tip = prompt( "what percent do you want to tip?")
 
 let total = calculateTip(parseInt(bill), parseFloat(tip)) ;
 
 
-alert("your total bill is" + total +".");
+alert("your total bill is $" + total +".");
 
 
 
