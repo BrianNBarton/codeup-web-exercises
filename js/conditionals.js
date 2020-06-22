@@ -181,10 +181,13 @@
 let confirm = confirm("enter a number")
 if (confirm === true) {
   let confirm = +prompt("enter a number");
+  if (isNaN(confirm)) {
+    alert("you did not enter a number");
+  } else {
   confirm % 2 === 0 ? alert("thats an even number ") : alert("you entered an odd number");
   confirm >= 0 ? alert("thats a positive number") : alert("thats a negative number");
   alert("your number plus 100 " + (confirm + 100)); }
   else {
     alert("you chose not to participate")
 
-}
+}}

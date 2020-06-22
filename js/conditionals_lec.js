@@ -141,7 +141,6 @@ else
 //TODO Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
 
 
-
 //TODO Together: refactor the above statement as a function
 
 
