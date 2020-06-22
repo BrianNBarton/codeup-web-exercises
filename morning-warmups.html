@@ -135,6 +135,50 @@ printEvens();
    }
 
 
+
+
+
+   function magic8Ball(number) {
+     var magic8Ball = 0;
+     switch (number) {
+       case 1:
+
+         return("As I see it, yes");
+
+       case 2:
+
+         return("Ask again later");
+
+       case 3:
+
+         return("Better not tell you now");
+
+       case 4:
+
+         return("cannot predict now");
+
+       case 5:
+
+         return("concentrate and as again");
+
+       case 6:
+
+         return("dont count on it");
+
+       case 7:
+
+         return("Outlook not so good");
+
+
+       case 8:
+
+         return("outlook is good");
+     }
+   }
+
+   let number = Math.floor(Math.random() * 8);
+   magic8Ball(number);
+
  </script>
 </body>
 </html>
