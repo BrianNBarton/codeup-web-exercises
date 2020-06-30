@@ -30,17 +30,29 @@
 */
 
 //
-// function showMultiplicationTable(a) {
+// function showMultiplicationTable(num) {
 //   let b;
 //   for (let i = 1; i <= 10; i++) {
-//     b = a * i;
-//     console.log(" " + a + "*" + i + "=" + b);
+//     b = num * i;
+//     console.log(" " + num + " x " + i + " = " + b);
 //   }
 // }
 
 /*Use a for loop and the code from the previous
 lessons to generate 10 random numbers between 20 and 200
 and output to the console whether each number is odd or even.
+
+
+
+for (let i=0;i<0;i++) {
+  let random = Math.floor(Math.random() * 181) + 20)
+  if (random % 2 === 0) {
+   console.log(random + "is even");
+   } else {
+   console.log(random + "is odd");
+   }
+   }
+
 
 // */
 //
@@ -119,7 +131,7 @@ and output to the console whether each number is odd or even.
 
 
 
-
+//from 100, count backwards by 5. do not include negative numbers.
 // //
 // var i = 100;
 //

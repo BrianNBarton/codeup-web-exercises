@@ -57,11 +57,38 @@ Here is an odd number: 49
 //   }
 // }
 // console.log(countOdds()); //invoke print function
+//
+//
+// let i;
+// for (i = 0; i < 50; i++) {
+//
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+//
+//   console.log("here is an odd number " + i + "  ");
+// }
 
-var text = "";
-var i;
-for (i = 0; i < 50; i++) {
+//
+// let userInput = prompt("Enter an odd number between 1 and 50");
+// while (userInput > 50 || userInput < 1 || userInput % 2 == 0) {
+//   userInput = prompt("That is not a valid input. Please enter an odd number between 1 and 50.")
+//   if (userInput <= 50 && userInput >= 1 && userInput % 2 != 0) {
+//     break;
+//   }
+// }
 
-  if (i % 2 === 0)  { continue; }
-  console.log("The number is " + i + "  " );
-} else (i === 27) { continue; }
+console.log("Number to skip is: " + userInput);
+
+for (let i = 1; i <= 50; i += 2) {
+  if (i % 2 == 0) {
+    continue;
+  } else if (i == userInput) {
+    console.log("Yikes! skipping " + i);
+  } else {
+    console.log("this is an odd number" + i)
+  }
+}
+
+else (i === 27) { continue; }
+
