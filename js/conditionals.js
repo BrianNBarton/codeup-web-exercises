@@ -189,5 +189,5 @@ if (confirm === true) {
   alert("your number plus 100 " + (confirm + 100)); }
   else {
     alert("you chose not to participate")
-
+c
 }}
