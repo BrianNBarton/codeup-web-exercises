@@ -1,4 +1,4 @@
-(function(){
+(function() {}
   "use strict";
 
   /**
@@ -6,30 +6,34 @@
    * Create an array of 4 people's names and store it in a variable called
    * 'names'.
    */
-     var names = ["Donnie", "Hannah", "Tracy", "Tristan"]
+  var names = ["Donnie", "Hannah", "Tracy", "Tristan"]
   /**
    * TODO:
    * Create a log statement that will log the number of elements in the names
    * array.
    */
-console.log(names.length)
+  console.log("the number of elements in the string is " + names.length + ".")
   /**
    * TODO:
    * Create log statements that will print each of the names individually by
    * accessing each element's index.
    */
 
-  names.forEach(function(name, index) {
+  names.forEach(function (name, index) {
     console.log('the fruit at index ' + index + ' is ' + name + '.');
   });
 
 
+  console.log(names[0]);
+  console.log(names[1]);
+  console.log(names[2];
+  console.log(names[3]);
   /**
    * TODO:
    * Write some code that uses a for loop to log every item in the names
    * array.
    */
-  for (var i = 0; i < names.length; i++) {
+  for (let i = 0; i < names.length; i++) {
     console.log("The fruit at index " + i + " is " + names[i] + ".");
   }
   /**
@@ -37,7 +41,7 @@ console.log(names.length)
    * Refactor your above code to use a `forEach` loop
    */
 
-  names.forEach(function(name, index) {
+  names.forEach(function (name, index) {
     console.log("FOR-EACH: The name at index " + index + " is " + name + ".");
   })
 
@@ -55,16 +59,27 @@ console.log(names.length)
    *  > second([1, 2, 3, 4, 5]) // returns 2
    *  > last([1, 2, 3, 4, 5]) // return 5
    */
-let first = [1, 2, 3, 4]
-//
+let first = [1, 2, 3, 4, 5]
+
  var notice = 'The first number in the array is: ' + first[0] + "\n";
 
+console.log(first);
+
   let second = [1, 2, 3, 4, 5]
-//
+
  var noticeTwo = 'The the second number in the array is: ' + second[1] + "\n";
 
+  console.log(second);
+
   let last = [1, 2, 3, 4, 5,]
-//
+
 var noticeThree = 'the last number in this array is: ' + last[4] + "\n";
 
 
+console.log(last);
+
+//
+// let elements = [1,2,3,4,5]
+// let first = function (arr) {
+//   return arr[1]
+// }
