@@ -31,3 +31,5 @@
 let arrayPlanets = planetsArray.join("<br>")
   console.log(arrayPlanets)
 });
+
+
