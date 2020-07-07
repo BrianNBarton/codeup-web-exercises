@@ -5,6 +5,50 @@
   <title>JS Arrays</title>
 </head>
 <body>
+
+
+
+<h1 id="demo"> </h1>
+
+<p class="a">P1 A</p>
+<p class="b">P2 B</p>
+<p class="a">P3 A</p>
+<p class="b">P4 B</p>
+
+<p id="demo"></p>
+<p id="demotext"></p>
+<div>
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" value="user">
+</div>
+
+
+<script>
+  (function () {
+    var pHello = document.getElementById('demo');
+    pHello.innerHTML = "<b>Hello Hyperion!</b>"
+  })();
+  (function () {
+    var pDemo = document.getElementById('demoText');
+    pDemo.innerText = "<b>Hello Hyperion!</b>"
+  })();
+
+
+
+
+  console.log(document.getElementbyId(id))
+  "use strict";
+  (function() {
+    // Get all elements with class 'even'
+    var evenElements = document.getElementsByTagName('p');
+    // Print all elements
+    for (let i = 0; i < pBs.length; i++) {
+      console.log(pBs[i].innerHTML);
+    }
+  })();
+</script>
+
+
 <script>
 // arr = ["this", "that", "other"];
 // alert(arr);
@@ -21,42 +65,42 @@
 //   console.log(" fruit at "+ i + "is " + fruits[i] + ".")
 // }
 
-fruits = ["Banana", "Orange", "Apple", "Mango"];
+//fruits = ["Banana", "Orange", "Apple", "Mango"];
 // for (let i = 0; i < fruits.length; i++) {
 //   console.log("The fruit at index " + i + " is " + fruits[i] + ".");
 // }
-
-
-fruits.forEach(function(fruit, index) {
-  console.log('the fruit at index ' + index + ' is ' + fruit + '.');
-});
-
-
-function twoParameterFunction(thing, index) {
-
-}
-
-
-  let shapes = ['square', 'rectangle', 'circle', 'triangle'];
-  shapes.forEach(myTwoParamFunction);
-
-
-  fruits.forEach(myTwoParamFunction);
-  function myTwoParamFunction(thing, index) {
-    alert('the thing at index ' + index + ' is ' + thing + '.');
-  }
-
-
-
-let array = [ "monday", "tuesday", "wednesday", "thursday", "friday",]
-
-  console.log(array.length);
-  console.log(array.unshift("sunday"));
-  console.log(array.push("saturday"));
-  array.forEach(function(day){
-    console.log(day);
-});
-  console.log(array.length);
+//
+//
+// fruits.forEach(function(fruit, index) {
+//   console.log('the fruit at index ' + index + ' is ' + fruit + '.');
+// });
+//
+//
+// function twoParameterFunction(thing, index) {
+//
+// }
+//
+//
+//   let shapes = ['square', 'rectangle', 'circle', 'triangle'];
+//   shapes.forEach(myTwoParamFunction);
+//
+//
+//   fruits.forEach(myTwoParamFunction);
+//   function myTwoParamFunction(thing, index) {
+//     alert('the thing at index ' + index + ' is ' + thing + '.');
+//   }
+//
+//
+//
+// let array = [ "monday", "tuesday", "wednesday", "thursday", "friday",]
+//
+//   console.log(array.length);
+//   console.log(array.unshift("sunday"));
+//   console.log(array.push("saturday"));
+//   array.forEach(function(day){
+//     console.log(day);
+// });
+//   console.log(array.length);
 
 
 </script>
