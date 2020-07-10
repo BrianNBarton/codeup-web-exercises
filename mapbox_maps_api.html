@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 100%;
+      height: 700px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<h3 id="reverseGeo"></h3>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Custom JS -->
+<script>
+
+  function geocode(search, token) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+      .then(function(res) {
+        return res.json();
+        // to get all the data from the request, comment out the following three lines...
+      }).then(function(data) {
+        return data.features[0].center;
+      });
+  }
+
+  //
+  // function reverseGeocode(coordinates, token) {
+  //   var baseUrl = 'https://api.mapbox.com';
+  //   var endPoint = '/geocoding/v5/mapbox.places/';
+  //   return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+  //     .then(function(res) {
+  //       return res.json();
+  //     })
+  //     // to get all the data from the request, comment out the following three lines...
+  //     .then(function(data) {
+  //       return data.features[0].place_name;
+  //     });
+  // }
+  mapboxgl.accessToken = mapboxKey;
+  let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 15,
+    center: [-98.4916, 29.4252]
+  });
+
+  // map.setCenter([-97.6789, 30.5083]);
+
+  var marker = new mapboxgl.Marker()
+    .setLngLat([-98.4861, 29.4260])
+    .addTo(map);
+
+  var popup = new mapboxgl.Popup()
+    .setLngLat([-98.489615, 27.6648])
+    .setHTML("<h3>Codeup Rocks!</h3>")
+    .addTo(map)
+
+  var alamoPopup = new mapboxgl.Popup()
+    .setHTML("<h3>Sushi Den!</h3>")
+    .addTo(map)
+
+  marker.setPopup(alamoPopup)
+
+  document.addEventListener("keyup", function(e) {
+    if (e.key === " ") {
+      let rrMark = new mapboxgl.Marker()
+        .setLngLat([-97.6789, 30.5083])
+        .addTo(map);
+    }
+  });
+
+  geocode("1487 S Pearl St, Denver, CO 80210", mapboxKey).then(function(data) {
+    console.log(data);
+    new mapboxgl.Marker().setLngLat(data).addTo(map);
+  });
+  //
+  // reverseGeocode({lat: 51.2194, lng: 4.4025}, mapboxKey).then(function(data) {
+  //   console.log(data);
+  //   document.querySelector("#reverseGeo").innerHTML = data;
+  // })
+
+
+</script>
+</body>
+</html>

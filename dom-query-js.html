@@ -1,3 +1,40 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+@BrianNBarton
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+CodeupClassroom
+/
+hyperion-web-exercises
+4
+1
+2
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+hyperion-web-exercises/dom-query-js.html
+@davidandstephens
+davidandstephens completed dom events exc
+Latest commit c3637eb 2 hours ago
+History
+2 contributors
+@trantbatey@davidandstephens
+82 lines (70 sloc)  2.98 KB
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,95 +62,70 @@
   culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<h2 id="buttons">buttons!</h2>
-<button id="btn1">Button 1</button>
-<button id="btn2">Button 2</button>
-<button id="btn3">Button 3</button>
-<button id="btn4">Button 4</button>
+<button id="btn-1">Button #1</button>
+<button id="btn-2">Button #2</button>
+<button id="btn-3">Button #3</button>
+<button id="btn-4">Button #4</button>
 
 <script>
   (function() {
     "use strict";
-    // TODO: Uncomment next line and get the main header element by id
-    var mainHeader = document.getElementById('main-header');
-    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-    mainHeader.innerText = 'JavaScript is ok';
-    // TODO: Uncomment the next line and get the sub header element by id
-    var subHeader = document.getElementById('sub-header');
-    // TODO: Set the text color of subHeader to blue
-    subHeader.style.color = '#0000FF';
-    // TODO: Uncomment the next line and get all list items
-    var listItems = document.getElementsByTagName('li');
-    // TODO: Set text color on every other list item to grey
-    // TODO: Set text color of li with dbid = 1 to blue
-    for (var i = 0; i < listItems.length; i++) {
-      if ((i+1)%2 === 0) {
-        listItems[i].style.color = 'grey';
-      }
-      if (listItems[i].hasAttribute('data-dbid')) {
-        if (listItems[i].getAttribute('data-dbid') === '1') {
-          listItems[i].style.color = 'blue';
+    document.getElementById("btn-1").addEventListener("click", function() {
+      // TODO: Uncomment next line and get the main header element by id
+      let mainHeader = document.getElementById('main-header');
+
+      // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+      mainHeader.innerText = 'JavaScript is Cool';
+    });
+
+
+    document.getElementById("btn-2").addEventListener("click", function() {
+      // TODO: Uncomment the next line and get the sub header element by id
+      let subHeader = document.getElementById('sub-header');
+
+      // TODO: Set the text color of subHeader to blue
+      subHeader.style.color = '#0000FF';
+    });
+
+    document.querySelector("#btn-3").addEventListener("click", function () {
+      // TODO: Uncomment the next line and get all list items
+      var listItems = document.getElementsByTagName('li');
+
+      // TODO: Set text color on every other list item to grey
+      // TODO: Set text color of li with dbid = 1 to blue
+      for (var i = 0; i < listItems.length; i++) {
+        if ((i + 1) % 2 === 0) {
+          listItems[i].style.color = 'grey';
+        }
+        if (listItems[i].hasAttribute('data-dbid')) {
+          if (listItems[i].getAttribute('data-dbid') === '1') {
+            listItems[i].style.color = 'blue';
+          }
         }
       }
-    }
-    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-    var subParagraphs = document.getElementsByClassName('sub-paragraph');
-    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraphs[0].innerHTML = 'Mission Accomplished!';
+    });
+
+    document.getElementById("btn-4").addEventListener("click", function() {
+      // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+      var subParagraphs = document.getElementsByClassName('sub-paragraph');
+
+      // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+      subParagraphs[0].innerHTML = 'Mission Accomplished!';
+    });
+
   })();
-
- // Add 4 buttons to the page
-
-  // create a handler function
-  // var listener = function (event) {
-  //   alert('You clicked the button!');
-  // }
-  //
-  // document.getElementById('btn1').addEventListener('click', listener);
-  // mainHeader.innerText = 'JavaScript is Cool';
-
-
-  // TODO: Uncomment next line and get the main header element by id
-  var mainHeader = document.getElementById("main-header");
-  // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-  function button1 (){
-    mainHeader.innerHTML = "JavaScript is Cool";
-  };
-  document.getElementById("btn1").addEventListener("click", button1);
-
-  // TODO: Uncomment next line and get the main header element by id
-  var mainHeader = document.getElementById("main-header");
-  // TODO: Set inner html of mainHeader to "JavaScript is ok"
-  function button2 (){
-    mainHeader.innerHTML = "JavaScript is ok";
-  };
-  document.getElementById("btn2").addEventListener("click", button2);
-
-
-
-
-  // TODO: Uncomment next line and get the main header element by id
-  var mainHeader = document.getElementById("main-header");
-  // TODO: Set inner html of mainHeader to "JavaScript is ok"
-  function button3 (){
-    mainHeader.innerHTML = "JavaScript is marvelous!!!";
-  };
-  document.getElementById("btn3").addEventListener("click", button3);
-
-
-  // TODO: Uncomment next line and get the main header element by id
-  var mainHeader = document.getElementById("main-header");
-  // TODO: Set inner html of mainHeader to "JavaScript is ok"
-  function button4 (){
-    mainHeader.innerHTML = "JavaScript is a thing we use";
-  };
-  document.getElementById("btn4").addEventListener("click", button4);
-
-
-
 </script>
-
-
-
-  </body>
+</body>
 </html>
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
