@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,69 +29,109 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 <!-- Custom JS -->
 <script>
-
-  function geocode(search, token) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-      .then(function(res) {
-        return res.json();
-        // to get all the data from the request, comment out the following three lines...
-      }).then(function(data) {
-        return data.features[0].center;
-      });
-  }
-
-  //
-  // function reverseGeocode(coordinates, token) {
-  //   var baseUrl = 'https://api.mapbox.com';
-  //   var endPoint = '/geocoding/v5/mapbox.places/';
-  //   return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
-  //     .then(function(res) {
-  //       return res.json();
-  //     })
-  //     // to get all the data from the request, comment out the following three lines...
-  //     .then(function(data) {
-  //       return data.features[0].place_name;
-  //     });
-  // }
   mapboxgl.accessToken = mapboxKey;
   let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 15,
+    zoom: 10,
     center: [-98.4916, 29.4252]
   });
 
   // map.setCenter([-97.6789, 30.5083]);
+  //
+  // var marker = new mapboxgl.Marker()
+  //   .setLngLat([-98.4861, 29.4260])
+  //   .addTo(map);
+  //
+  // var popup = new mapboxgl.Popup()
+  //   .setLngLat([-98.489615, 29.426827])
+  //   .setHTML("<h3>Codeup Rocks!</h3>")
+  //   .addTo(map)
+  //
+  // var alamoPopup = new mapboxgl.Popup()
+  //   .setHTML("<h3>Remember The Alamo!</h3>")
+  //   .addTo(map)
+  //
+  // marker.setPopup(alamoPopup)
+  //
+  // document.addEventListener("keyup", function(e) {
+  //   if (e.key === " ") {
+  //     let rrMark = new mapboxgl.Marker()
+  //       .setLngLat([-97.6789, 30.5083])
+  //
+  //
+  //       .addTo(map);
+  //   }
+  // });
 
-  var marker = new mapboxgl.Marker()
-    .setLngLat([-98.4861, 29.4260])
-    .addTo(map);
 
-  var popup = new mapboxgl.Popup()
-    .setLngLat([-98.489615, 27.6648])
-    .setHTML("<h3>Codeup Rocks!</h3>")
-    .addTo(map)
+  geocode("Chao Fa Soi Ta-iad Rd Mueang Phuket District, Phuket 83000, Thailand", mapboxKey).then(function(data) {
+    console.log(data);
+    let tonys = new mapboxgl.Marker().setLngLat(data).addTo(map);
 
-  var alamoPopup = new mapboxgl.Popup()
-    .setHTML("<h3>Sushi Den!</h3>")
-    .addTo(map)
+    var tonysPopup = new mapboxgl.Popup()
+      .setHTML("<h3>Hello from Thailand!</h3>")
+      .addTo(map)
 
-  marker.setPopup(alamoPopup)
-
-  document.addEventListener("keyup", function(e) {
-    if (e.key === " ") {
-      let rrMark = new mapboxgl.Marker()
-        .setLngLat([-97.6789, 30.5083])
-        .addTo(map);
-    }
+    tonys.setPopup(tonysPopup)
   });
+
+
+
+
+  /////.///
+  //
+  // document.addEventListener("keyup", function(e) {
+  //   if (e.key === " ") {
+  //     let rrMark = new mapboxgl.Marker()
+  //       .setLngLat([-97.6789, 30.5083])
+  //       .addTo(map);
+  //   }
+  // });
+
 
   geocode("1487 S Pearl St, Denver, CO 80210", mapboxKey).then(function(data) {
     console.log(data);
-    new mapboxgl.Marker().setLngLat(data).addTo(map);
+    let sushiDen = new mapboxgl.Marker().setLngLat(data).addTo(map);
+
+    var sushiPopup = new mapboxgl.Popup()
+      .setHTML("<h3>Best sushi in Colorado</h3>")
+      .addTo(map)
+
+    sushiDen.setPopup(sushiPopup);
   });
+  ////////////
+
+
+  geocode("10820 Bandera Rd, San Antonio, TX 78250", mapboxKey).then(function(data) {
+    console.log(data);
+    let pericos = new mapboxgl.Marker().setLngLat(data).addTo(map);
+
+    var pericoPopup = new mapboxgl.Popup()
+      .setHTML("<h3>Favorite Mexican food</h3>")
+      .addTo(map)
+
+    pericos.setPopup(pericoPopup);
+  });
+
+  //////.
+
+
+
+  geocode("900 E 11th St, Austin, TX 78702", mapboxKey).then(function(data) {
+    console.log(data);
+    let franklinBbq = new mapboxgl.Marker().setLngLat(data).addTo(map);
+
+    var franklinPopup = new mapboxgl.Popup()
+      .setHTML("<h3>Wait in line here</h3>")
+      .addTo(map)
+
+      franklinBbq.setPopup(franklinPopup);
+  });
+
+
+
+
   //
   // reverseGeocode({lat: 51.2194, lng: 4.4025}, mapboxKey).then(function(data) {
   //   console.log(data);
