@@ -201,28 +201,27 @@
   magic8Ball(number);
 
 
-
- // write a js function that modifies a variable called togglelights. if the lights are on, turn them off.
- //
- //
- //  function toggleLights(x) {
- //    if (x === "on") {
- //      alert("lights off");
- //    } else (x === "off"); {
- //      alert("lights on");
- //    }
- // //  }
- //  let lights = "on";
- //  let lightSwitch = function() {
- //    if (lights === "on") {
- //      lights = "off"
- //    } else {
- //      lights = "on"
- //    }
- //  }
- //  console.log("the lights are " + lights);
- //  lightSwitch();
- //  console.log("the lights are now " +lights);
+  // write a js function that modifies a variable called togglelights. if the lights are on, turn them off.
+  //
+  //
+  //  function toggleLights(x) {
+  //    if (x === "on") {
+  //      alert("lights off");
+  //    } else (x === "off"); {
+  //      alert("lights on");
+  //    }
+  // //  }
+  //  let lights = "on";
+  //  let lightSwitch = function() {
+  //    if (lights === "on") {
+  //      lights = "off"
+  //    } else {
+  //      lights = "on"
+  //    }
+  //  }
+  //  console.log("the lights are " + lights);
+  //  lightSwitch();
+  //  console.log("the lights are now " +lights);
 
   //
   //
@@ -239,7 +238,7 @@
   //     num++;
   //   }}
 
- // countTo10()
+  // countTo10()
 
 
   //return a string where each character is repeated once (case sensitive)
@@ -253,17 +252,14 @@
   //   )
   // }
 
-  function doubleChar(str){
+  function doubleChar(str) {
     let returnString = "";
 
-    for (let i = 0; i < str.length; i++ ) {
+    for (let i = 0; i < str.length; i++) {
       returnString += str[i] + str[i];
       console.log(returnString);
     }
   }
-
-
-
 
 
   var fibonacci = function (n) {
@@ -277,13 +273,26 @@
   };
 
 
-  function isolateTensDigit(int){
+  function isolateTensDigit(int) {
     int %= 100;
     int /= 10;
     int = Math.floor(int);
     return int
   }
+
   console.log(isolateTensDigit(345));
+
+  //
+  // function returnTensDigit(num) {
+  // //  return '' + num.toString() [1];
+  //   const l = Math.pow(10, Math.floor(Math.log(num) / Math.log(10)) - 1);
+  //   const b = Math.floor(num / l);
+  //   return b - Math.floor(b / 10) * 10;
+  // }
+  //
+  // console.log(returnTensDigit(354));
+
+
 
 
 </script>
