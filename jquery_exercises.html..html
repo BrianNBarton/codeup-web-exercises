@@ -24,14 +24,14 @@
 <div class="not-important">
   <h2>Lorem Ipsum</h2>
   <p>
-    Freude, schöner Götterfunken,
+    Freude! schöner Götterfunken,
     Tochter aus Elysium,
     Wir betreten feuertrunken,
     Himmlische, dein Heiligtum!
     Deine Zauber binden wieder,
     Was die Mode streng geteilt;
     Alle Menschen werden Brüder,
-    Wo dein sanfter Flügel weilt. <span class="important">Freude, schöner Götterfunken,
+    Wo dein sanfter Flügel weilt. <span class="codeup">Freude, schöner Götterfunken,
 Tochter aus Elysium,
 Wir betreten feuertrunken,
 Himmlische, dein Heiligtum!
@@ -47,18 +47,37 @@ Alle Menschen werden Brüder,
 Wo dein sanfter Flügel weilt.quis ut aliquip ex ea commodo.
   </p>
 </div>
-<p class="important">This is also very important.</p>
-
+<p class="codeup">This is also very important.</p>
+<h1>Symphony No. 9</h1>
+<ul class="codeup">
+  <li> Freude!</li>
+<li> Freude!</li>
+<li> Freude!</li>
+<li> Freude!</li></ul>
 <script>
+//Create content in your HTML file using at least the following elements: h1, p, ul, li, div.
+
 
   $(document).ready(function () { 
     alert("Ready to go!")     })
 
 
-  $('p').css('font-size', '20px');
+$('p, div').css('font-size', '32px');
 
 
-  $('.important').css('background-color', 'yellow');
+$('li').css('font-size', '20px');
+
+
+  $('.codeup').css('background-color', 'red', 'color', 'green');
+
+
+$('h1, p, li').css('background-color', 'blue', );
+
+
+$(document).ready(function () {
+  alert("moar stuff")     })
+
+//$('*').css('border', '1px solid #F00');// all selector *
 
 
 
