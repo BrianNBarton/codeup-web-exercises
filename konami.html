@@ -75,11 +75,18 @@
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
 </div>
 
 
 <script>
-  document.addEventListener('keydown', function(e) {
+
+  newAudio('.idea/Mario0-coin-sound.mp3')
+
+
+  document.addEventListener('keydown', function (e) {
     if (e.keyCode == 38) {
       document.getElementById('audio').play();
     }

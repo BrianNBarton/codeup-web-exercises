@@ -293,7 +293,6 @@
   // console.log(returnTensDigit(354));
 
 
-
   //
   // var nonSortedArray = ['hi', 'yo', 'whatup', 'bye', 'lol', 10];
   // var reverseSortedArray = nonSortedArray.sort(function (a, b) {
@@ -305,17 +304,28 @@
   // console.log(reverseSortedArray);
 
   function reverseAlphaArray(arr) {
-    for (let j =0; j<arr.length; j++) {
-      if(typeof arr[j] !== "string") {
+    for (let j = 0; j < arr.length; j++) {
+      if (typeof arr[j] !== "string") {
         return null;
       }
     }
-  return arr.sort().reverse();
+    return arr.sort().reverse();
 
   }
 
+//if first param is divisible by second param, return true
+  //if the paramater is not a number return null
 
-</script>
+  function isDivisible(a, b) {
+
+    if (typeof a === "number" && typeof b === "number") {
+      return (a % b === 0)
+    } else {
+      return null
+    }
+  }
+
+  console.log(isDivisible(4, "4"));
 
 
 <script src="js/fizzbuzz.js"></script>
