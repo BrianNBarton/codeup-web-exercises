@@ -5,21 +5,23 @@
   <title>Morning Warmups</title>
 </head>
 <body>
+
+<script src="js/fizzbuzz.js"></script>
+
 <script>
-  write
-  a
-  javaScript
-
-  function that
-
-  takes in a
-  number
-  and
-  multiplies
-  by
-  five
-
-  function multiplyByFive(n) {
+  // write
+  // a
+  // javaScript
+  //
+  // function that
+  //
+  // takes in a
+  // number
+  // and
+  // multiplies
+  // by
+  // five
+function multiplyByFive(n) {
     return n * 5;
   }
 
@@ -32,9 +34,7 @@
     console.log("happy birthday to you!!!");
   }
 
-  singHappyBirthday(Hyperion)
-  )
-  ;
+  singHappyBirthday('Hyperion');
 
 
   //write a function that returns the number 7
@@ -328,7 +328,20 @@
   console.log(isDivisible(4, "4"));
 
 
-<script src="js/fizzbuzz.js"></script>
+  function convertInches(inches) {
+    let feetFromInches = Math.floor(inches / 12);//There are 12 inches in a foot
+    let inchesRemainder = inches % 12;
+    let result = feetFromInches + "'-" + inchesRemainder + "\"";
+    console.log(result);
+  }
+
+  convertInches(55);
+
+
+
+
+
+</script>
 </body>
 </html>
 
