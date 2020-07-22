@@ -128,27 +128,51 @@
       height: auto;
       display: block;
     }
+
+    .main {
+      font-size: 120%;
+      color: red;
+    }
+
   </style>
 </head>
 
 <link rel="stylesheet" href="css/query_faq.css">
 <body>
-
-<h1>Faq</h1>
-
 <p></p>
 <main>
+  <button id="btn-1" onclick="myFunction()">Click Me</button>
 
-  <!--<dl>-->
-  <!--  <dt></dt>-->
-  <!--  <dd>A large feline inhabiting Bodmin Moor.</dd>-->
+<!--  <button>Toggle class "main" for p elements</button>-->
+  <!--  <button id="btn-1">Click me for stuff</button>-->
+  <dl>
+    <dt></dt>
+    <h3>Yosemite</h3>
+    <ul id="Highlight">
+      <li>Is a place</li>
+      <li>things live there</li>
+      <li>it is protected land</li>
+      <li>you can visit</li>
+    </ul>
 
-  <!--  <dt>Morgawr</dt>-->
-  <!--  <dd>A sea serpent.</dd>-->
 
-  <!--  <dt>Owlman</dt>-->
-  <!--  <dd>A giant owl-like creature.</dd>-->
-  <!--</dl>-->
+    <h3>YellowStone</h3>
+    <ul>
+      <li>Is a place</li>
+      <li>things live there</li>
+      <li>it is protected land</li>
+      <li>you can visit</li>
+    </ul>
+
+
+    <h3>Rocky Mountain National Park</h3>
+    <ul>
+      <li>Is a place</li>
+      <li>things live there</li>
+      <li>it is protected land</li>
+      <li>you can visit</li>
+    </ul>
+
 
 </main>
 
@@ -156,28 +180,6 @@
 
 
   "use strict";
-
-
-  $(document).ready(function () {
-    var myAudio = new Audio('./img/Minecraft.ogg');
-    myAudio.autoplay = true;
-
-    myAudio.addEventListener("loadeddata", function () {
-      myAudio.muted = true;
-      myAudio.play();
-      myAudio.muted = false;
-      console.log("check")
-    }, true);
-    myAudio.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-    //  myAudio.play();
-    console.log("check")
-
-  });
-
-
 
 
   $(".big-title").dblclick(function () {
@@ -189,15 +191,15 @@
   console.log(holdThis);
 
   $('main')
-    .prepend('<h1>YOSEMITE </h1>')
-    .append('<img src="img/yosemite2.png" alt="yosemite" style="display: inline-block"> <dt>this</dt><dd>explaination</dd>')
+    .prepend('<h1>OH dis is the top! </h1>')
+    .append('<img src="img/yosemite2.png" alt="yosemite" style="display: inline-block"> <dt>Oh my</dt><dd>Is this MineCraft?</dd>')
     // .prepend('<h1>ROCKY MOUNTAIN NATIONAL PARK</h1>')
 
 
-    .append('<img src="img/valley.jpg" alt="Rocky Mountain" style="display: inline-block"> <dt>this</dt><dd>explaination</dd>')
+    .append('<img src="img/valley.jpg" alt="Rocky Mountain" style="display: inline-block"> <dt>Look at this</dt><dd>so many right angles</dd>')
 
 
-    .append('<img src="img/rocky-mountain.html" alt="Rocky Mountain" style="display: inline-block"> <dt>this</dt><dd>explaination</dd>')
+    .append('<img src="img/rocky-mountain.html" alt="Rocky Mountain" style="display: inline-block"> <dt>look here</dt><dd>plenty of words</dd>')
 
     .append('<img src="img/bridge.jpg" alt="Rocky Mountain" style="display: inline-block"> <dt>this</dt><dd>explaination</dd>')
 
@@ -206,35 +208,80 @@
     .append(holdThis);
 
   //
-  // e swim in rivers and lakes?
-  //   Swimming is not recommended because most lakes and streams are dangerously cold.
-
-  $("h1").click(function () {
-    if ($('body').hasClass("dark-mode")) {
-      $(this).css({
-        "color": "#FE6700",
-        "text-decoration": "underline"
-      })
-    } else {
-      $(this).css({
-        "color": "#373fff",
-        "text-decoration": "underline"
-      })
-    }
-  });
+  // $("h1").click(function () {
+  //   if ($('body').hasClass("dark-mode")) {
+  //     $(this).css({
+  //       "color": "#FE6700",
+  //       "text-decoration": "underline"
+  //     })
+  //   } else {
+  //     $(this).css({
+  //       "color": "#373fff",
+  //       "text-decoration": "underline"
+  //     })
+  //   }
+  // });
 
   $("p").addClass('cool-stuff');
 
   $(".cool-stuff").click(function () {
     $(this).removeClass('cool-stuff');
   });
+  //
+  // $(document).keypress(function (e) {
+  //   console.log(e);
+  //   if (e.key === "f") {
+  //     $('body').toggleClass("invisible");
+  //   }
+  // });
 
-  $(document).keypress(function (e) {
-    console.log(e);
-    if (e.key === "f") {
-      $('body').toggleClass("invisible");
-    }
+
+  $("Highlight").children().each(function (index) {
+    $(this).click(function () {
+      $(this).css({
+        "background-color": "yellow",
+      });
+    });
   });
+
+
+  $("#btn1").click(function () {
+    $("ul li:last-child").toggle('highlight')
+  })
+
+  $("#btn1").click(function () {
+    $("ul li:first-child").toggle('background-color: blue')
+  })
+
+  $(document).ready(function () {
+    $("button").click(function () {
+      $("li").last().toggleClass("main");
+    });
+  });
+
+  $(document).ready(function () {
+    $("button").click(function () {
+      $("ul li:last-child").css(
+        'background-color', 'yellow'
+      )
+      $(document).ready(function(){
+        $("h3").click(function(){
+       $(alert)
+        });
+      });
+
+    });
+  });
+
+  //
+  // When any h3 is clicked, the lis underneath it should be bolded.
+
+  $('selector').html();
+  //   Use font-weight: bold to achieve this.
+
+
+  // When any list item is clicked, first li of the parent ul should have a font color of blue.
+
 
 </script>
 
