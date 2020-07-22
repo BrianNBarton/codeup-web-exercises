@@ -134,6 +134,10 @@
       color: red;
     }
 
+    .important {
+      font-weight: bold;
+      font-size: xx-large;
+    }
   </style>
 </head>
 
@@ -143,7 +147,7 @@
 <main>
   <button id="btn-1" onclick="myFunction()">Click Me</button>
 
-<!--  <button>Toggle class "main" for p elements</button>-->
+  <!--  <button>Toggle class "main" for p elements</button>-->
   <!--  <button id="btn-1">Click me for stuff</button>-->
   <dl>
     <dt></dt>
@@ -261,22 +265,35 @@
 
   $(document).ready(function () {
     $("button").click(function () {
-      $("ul li:last-child").css(
-        'background-color', 'yellow'
-      )
-      $(document).ready(function(){
-        $("h3").click(function(){
-       $(alert)
-        });
-      });
-
+      $("ul li:last-child").css('background-color', 'yellow')
+    });
+  });
+  $(document).ready(function () {
+    $("h3").click(function () {
+      $("li").addClass("important");
+    });
+  });
+  $(document).ready(function () {
+    $("li").click(function () {
+      $("li:first-child").css('background-color', 'blue');
     });
   });
 
   //
-  // When any h3 is clicked, the lis underneath it should be bolded.
+  // $(document).ready(function () {
+  //   $("li").click(function () {
+  //     $("li").first().css("background-color", 'blue');
+  //   });
+  // });
 
-  $('selector').html();
+
+
+
+
+  //
+  // When any h3 is clicked, the lis underneath it should be bolded.
+  //
+  // $('selector').html();
   //   Use font-weight: bold to achieve this.
 
 
