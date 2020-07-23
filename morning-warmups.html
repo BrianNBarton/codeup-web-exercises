@@ -21,7 +21,7 @@
   // multiplies
   // by
   // five
-function multiplyByFive(n) {
+  function multiplyByFive(n) {
     return n * 5;
   }
 
@@ -313,7 +313,7 @@ function multiplyByFive(n) {
 
   }
 
-//if first param is divisible by second param, return true
+  //if first param is divisible by second param, return true
   //if the paramater is not a number return null
 
   function isDivisible(a, b) {
@@ -337,9 +337,18 @@ function multiplyByFive(n) {
 
   convertInches(55);
 
+  //
+  // write a function that returns number of words in a string
+  //   non string inputs return null
 
 
-
+  function numOfWords(str) {
+    if (typeof str === "string") {
+      return str.split(" ").length;
+  } else {
+    return null;
+  }
+}
 
 </script>
 </body>
