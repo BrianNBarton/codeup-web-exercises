@@ -43,13 +43,13 @@
     "price": 10
   },  {
   "title": "Edger",
-  "quantity": 50,
+  "quantity": 5,
   "categories": [
     "tool",
     "gas",
     "outdoor"
   ],
-  "price": 10
+  "price": 200
 },  {
   "title": "wrench",
   "quantity": 25,
