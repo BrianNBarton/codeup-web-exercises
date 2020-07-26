@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+
+.map {
+  background-color: gray;
+  height: 300px;
+  widgh: 500px;
+}
+
+
 body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   color: rgb(105, 104, 104);
   font-family: sans-serif
-  background-color: #ffffff;
+  background-color: red;
   display: grid;
 
 }
@@ -14,7 +22,7 @@ body {
 
 .container {
   height: 80vh;
-  background-color: #ffffff;
+  background-color: red;
   border-color: #ffffff;
   align-items: center;
   border-radius: 1rem;
