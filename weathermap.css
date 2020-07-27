@@ -1,106 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
-#map {
-  /* the width and height may be set to any size */
-  width: 100%;
-  height: 700px;
-}
 
-.map {
-  background-color: blue;
-  height: 300px;
-  widgh: 500px;
-}
+body { margin: 0; padding: 0; }
+#map { width: 80%; height: 500px; }
 
-
-body {
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  color: Orange;
-  font-family: sans-serif
-  background-color: blue;
-  display: grid;
-
-}
-
-
-.container {
-  height: 40vh;
-  background-color: blue;
-  border-color: #ffffff;
-  align-items: center;
-  border-radius: 1rem;
-  vertical-align: middle
-}
-
-@media(max-width:767px) {
-  .container {
-    height: fit-content
-  }
-}
-
-
-.weather {
-  width: 77%
-}
-
-@media(max-width:767px) {
-  .weather {
-    width: 100%
-  }
-}
-
-.card {
-  padding: 1rem;
-
-  border-radius: 1rem;
-  background-color: blue;
-  border-color: blue;
-  box-shadow: white;
-  text-align: center
-}
-
-@media(max-width:768px) {
-  .card {
-    margin: 1.5rem
-  }
-}
-
-.title {
-  justify-content: center;
+.coordinates {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  bottom: 40px;
+  left: 10px;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 3px;
+  display: none;
 }
-
-.title p {
-  margin-bottom: 0.2rem;
-  font-size: 1.2rem
-}
-
-.temp {
-  font-size: 2.6rem;
-  margin-bottom: 1rem
-}
-
-.header {
-  color: black
-}
-
-.col-4 {
-  padding: 0 0.2rem
-}
-
-.icon {
-  align-self: flex-end;
-  margin-right: -2.5rem;
-  margin-top: -2rem;
-  z-index: 999
-}
-
-.icon img {
-  width: 5rem
-}
-

@@ -1,4 +1,4 @@
-//
+
 
 $.get("http://api.openweathermap.org/data/2.5/onecall", {
   APPID: OpenWeatherKey,
@@ -41,14 +41,25 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
   }
 });
 
-
 mapboxgl.accessToken = mapboxKey;
 var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v9',
-  zoom: 10,
-  center: [-98.4916, 29.4252]
+  container: 'map', // container id
+  style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  center: [-98.4936, 29.419], // starting position [lng, lat]
+  zoom: 10 // starting zoom
 });
 
+var marker = new mapboxgl.Marker({
+  draggable: true
+})
+  .setLngLat([-98.493, 29.419])
+  .addTo(map);
 
+function onDragEnd() {
+  var lngLat = marker.getLngLat();
+  coordinates.style.display = 'block';
+  coordinates.innerHTML =
+    'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+}
 
+marker.on('dragend', onDragEnd);
