@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+#map {
+  /* the width and height may be set to any size */
+  width: 100%;
+  height: 700px;
+}
 
 .map {
-  background-color: gray;
+  background-color: blue;
   height: 300px;
   widgh: 500px;
 }
@@ -12,17 +17,17 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  color: rgb(105, 104, 104);
+  color: Orange;
   font-family: sans-serif
-  background-color: red;
+  background-color: blue;
   display: grid;
 
 }
 
 
 .container {
-  height: 80vh;
-  background-color: red;
+  height: 40vh;
+  background-color: blue;
   border-color: #ffffff;
   align-items: center;
   border-radius: 1rem;
@@ -50,9 +55,9 @@ body {
   padding: 1rem;
 
   border-radius: 1rem;
-  background-color: rgba(238, 237, 237, 0.22);
-  border-color: rgba(238, 237, 237, 0.22);
-  box-shadow: 5px 6px 6px 2px #e9ecef;
+  background-color: blue;
+  border-color: blue;
+  box-shadow: white;
   text-align: center
 }
 
@@ -81,7 +86,7 @@ body {
 }
 
 .header {
-  color: #dddddd
+  color: black
 }
 
 .col-4 {
@@ -98,3 +103,4 @@ body {
 .icon img {
   width: 5rem
 }
+

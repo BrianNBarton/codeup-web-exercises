@@ -8,12 +8,27 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="weathermap.css">
 
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Custom CSS -->
+
+
 </head>
 
 <body>
 
-<h1>    Weather Map</h1>
-
+<h1 class="container-fluid row justify-content-center"> Weather Map</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">San Antonio Weather</h1>
+    <p class="lead">Weekly Forecast  </p>
+  </div>
+</div>
+<!--// make a carosel-->
+<!--// give it a shiny background-->
+<!--//get that map working-->
 
 <div class="container-fluid">
 
@@ -21,68 +36,68 @@
 
     <section class="container-fluid d-flex flex-row justify-content-around">
 
-
-      <div id="card0" class="card text-center" style="width: 18rem;">
-        <div id="weatherDate0" class="card-header"> weather date</div>
-        <ul>
-          <li id="highLowTemp" class="list-group-item">High and Low</li>
-          <li id="feelsLike" class="list-group-item">Feels Like</li>
-          <li id="humidity" class="list-group-item">Humidity</li>
-          <li id="wind" class="list-group-item">Wind</li>
-          <li id="pressure" class="list-group-item">Pressure</li>
-          </ul id="list-group list-group-flush">
+      <div id="card-0" class="card text-center" style="width: 18rem;">
+        <div id="weatherDate-0" class="card-header"> weather date</div>
+        <ul id="list-group list-group-flush">
+          <li id="highLowTemp-0" class="list-group-item">High and Low</li>
+          <li id="feelsLike-0" class="list-group-item">Feels Like</li>
+          <li id="humidity-0" class="list-group-item">Humidity</li>
+          <li id="wind-0" class="list-group-item">Wind</li>
+          <li id="pressure-0" class="list-group-item">Pressure</li>
+          </ul >
       </div>
 
+      <div id="card-1" class="card text-center" style="width: 18rem;">
+        <div id="weatherDate-1" class="card-header"> weather date</div>
+        <ul id="list-group list-group-flush">
+          <li id="highLowTemp-1" class="list-group-item">High and Low</li>
+          <li id="feelsLike-1" class="list-group-item">Feels Like</li>
+          <li id="humidity-1" class="list-group-item">Humidity</li>
+          <li id="wind-1" class="list-group-item">Wind</li>
+          <li id="pressure-1" class="list-group-item">Pressure</li>
+        </ul>
+      </div>
+      <div id="card2" class="card text-center" style="width: 18rem;">
+        <div id="weatherDate-2" class="card-header"> weather date</div>
+        <ul id="list-group list-group-flush">
+          <li id="highLowTemp-2" class="list-group-item">High and Low</li>
+          <li id="feelsLike-2" class="list-group-item">Feels Like</li>
+          <li id="humidity-2" class="list-group-item">Humidity</li>
+          <li id="wind-2" class="list-group-item">Wind</li>
+          <li id="pressure-2" class="list-group-item">Pressure</li>
+        </ul>
+      </div>
+      <div id="card-3" class="card text-center" style="width: 18rem;">
+        <div id="weatherDate-3" class="card-header"> weather date</div>
+        <ul id="list-group list-group-flush">
+          <li id="highLowTemp-3" class="list-group-item">High and Low</li>
+          <li id="feelsLike-3" class="list-group-item">Feels Like</li>
+          <li id="humidity-3" class="list-group-item">Humidity</li>
+          <li id="wind-3" class="list-group-item">Wind</li>
+          <li id="pressure-3" class="list-group-item">Pressure</li>
+        </ul>
+      </div>
+      <div id="card-4" class="card text-center" style="width: 18rem;">
+        <div id="weatherDate-4" class="card-header"> weather date</div>
+        <ul id="list-group list-group-flush">
+          <li id="highLowTemp-4" class="list-group-item">High and Low</li>
+          <li id="feelsLike-4" class="list-group-item">Feels Like</li>
+          <li id="humidity-4" class="list-group-item">Humidity</li>
+          <li id="wind-4" class="list-group-item">Wind</li>
+          <li id="pressure-4" class="list-group-item">Pressure</li>
+        </ul>
+      </div>
 
-<!--      <div id="card1" class="card text-center" style="width: 18rem;">-->
-<!--        <div id="weatherDate" class="card-header"> weather date</div>-->
-<!--        <ul id="list-group list-group-flush">-->
-<!--          <li id="highLowTemp" class="list-group-item">High and Low</li>-->
-<!--          <li id="feelsLike" class="list-group-item">Feels Like</li>-->
-<!--          <li id="humidity" class="list-group-item">Humidity</li>-->
-<!--          <li id="wind" class="list-group-item">Wind</li>-->
-<!--          <li id="pressure" class="list-group-item">Pressure</li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <div id="card3" class="card text-center" style="width: 18rem;">-->
-<!--        <div id="weatherDate" class="card-header"> weather date</div>-->
-<!--        <ul id="list-group list-group-flush">-->
-<!--          <li id="highLowTemp" class="list-group-item">High and Low</li>-->
-<!--          <li id="feelsLike" class="list-group-item">Feels Like</li>-->
-<!--          <li id="humidity" class="list-group-item">Humidity</li>-->
-<!--          <li id="wind" class="list-group-item">Wind</li>-->
-<!--          <li id="pressure" class="list-group-item">Pressure</li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <div id="card4" class="card text-center" style="width: 18rem;">-->
-<!--        <div id="weatherDate" class="card-header"> weather date</div>-->
-<!--        <ul id="list-group list-group-flush">-->
-<!--          <li id="highLowTemp" class="list-group-item">High and Low</li>-->
-<!--          <li id="feelsLike" class="list-group-item">Feels Like</li>-->
-<!--          <li id="humidity" class="list-group-item">Humidity</li>-->
-<!--          <li id="wind" class="list-group-item">Wind</li>-->
-<!--          <li id="pressure" class="list-group-item">Pressure</li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <div id="card5" class="card text-center" style="width: 18rem;">-->
-<!--        <div id="weatherDate" class="card-header"> weather date</div>-->
-<!--        <ul id="list-group list-group-flush">-->
-<!--          <li id="highLowTemp" class="list-group-item">High and Low</li>-->
-<!--          <li id="feelsLike" class="list-group-item">Feels Like</li>-->
-<!--          <li id="humidity" class="list-group-item">Humidity</li>-->
-<!--          <li id="wind" class="list-group-item">Wind</li>-->
-<!--          <li id="pressure" class="list-group-item">Pressure</li>-->
-<!--        </ul>-->
-<!--      </div>-->
 
   </section>
   </container>
 </div>
+<div id='map'></div>
 
-</div>
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-
-<!--  <script src="js/jquery.js"></script>-->
+<!-- Custom JS -->
 
 <script src="js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

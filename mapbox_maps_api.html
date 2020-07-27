@@ -37,32 +37,32 @@
     center: [-98.4916, 29.4252]
   });
 
-  // map.setCenter([-97.6789, 30.5083]);
-  //
-  // var marker = new mapboxgl.Marker()
-  //   .setLngLat([-98.4861, 29.4260])
-  //   .addTo(map);
-  //
-  // var popup = new mapboxgl.Popup()
-  //   .setLngLat([-98.489615, 29.426827])
-  //   .setHTML("<h3>Codeup Rocks!</h3>")
-  //   .addTo(map)
-  //
-  // var alamoPopup = new mapboxgl.Popup()
-  //   .setHTML("<h3>Remember The Alamo!</h3>")
-  //   .addTo(map)
-  //
-  // marker.setPopup(alamoPopup)
-  //
-  // document.addEventListener("keyup", function(e) {
-  //   if (e.key === " ") {
-  //     let rrMark = new mapboxgl.Marker()
-  //       .setLngLat([-97.6789, 30.5083])
-  //
-  //
-  //       .addTo(map);
-  //   }
-  // });
+  map.setCenter([-97.6789, 30.5083]);
+
+  var marker = new mapboxgl.Marker()
+    .setLngLat([-98.4861, 29.4260])
+    .addTo(map);
+
+  var popup = new mapboxgl.Popup()
+    .setLngLat([-98.489615, 29.426827])
+    .setHTML("<h3>Codeup Rocks!</h3>")
+    .addTo(map)
+
+  var alamoPopup = new mapboxgl.Popup()
+    .setHTML("<h3>Remember The Alamo!</h3>")
+    .addTo(map)
+
+  marker.setPopup(alamoPopup)
+
+  document.addEventListener("keyup", function(e) {
+    if (e.key === " ") {
+      let rrMark = new mapboxgl.Marker()
+        .setLngLat([-97.6789, 30.5083])
+
+
+        .addTo(map);
+    }
+  });
 
 
   geocode("Chao Fa Soi Ta-iad Rd Mueang Phuket District, Phuket 83000, Thailand", mapboxKey).then(function(data) {
