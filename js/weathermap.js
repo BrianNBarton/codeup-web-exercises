@@ -7,6 +7,8 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
   lon: -98.4936,
   units: "imperial",
   part: "daily"
+
+
 }).done(function(data) {
   console.log(data);
   for (let i = 0; i < 5; i++) {
@@ -60,6 +62,32 @@ function onDragEnd() {
   coordinates.style.display = 'block';
   coordinates.innerHTML =
     'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+
+// take .done contents into own function
+  // send data variable from .done to new method
+  // make another ajax call inside on dragend using new longlat
+  // send results through new method
+
+
 }
 
 marker.on('dragend', onDragEnd);
+
+const forecastWeather = function (latitude, longitude) {
+  $.get("https://api.openweathermap.org/data/2.5/onecall", {
+    APPID: OpenWeatherKey,
+    lat: latitude,
+    lon: longitude,
+    units: "imperial"
+
+  }).done(card);
+}
+
+function NewLocation(){
+
+}
+
+//Once you’ve acquired the new Latitude/Longitude after the marker has been moved,
+// you can make another AJAX call using those coordinates,
+// and send the resulting data as an argument into a separate function
+// (named whatever you want it to be) - and use that function to update your HTML elements.

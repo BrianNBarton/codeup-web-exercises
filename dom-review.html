@@ -5,8 +5,9 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script type=”text/javascript” src=https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
 
   <title>DOM Review</title>
 
@@ -42,9 +43,13 @@
   </div>
 </div>
 <!--<script src="js/jquery.js"></script>-->
+
+<script type=”text/javascript” src=https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js></script>
+
 <script>
-  $(document).ready(function () {
-    console.log("ready");
+  "use strict";
+  (function () {
+
 
     //type in input, and append it to the list when clicked
     $('#add-to-list').click(function () {
@@ -55,41 +60,36 @@
     //Heading Change me double clicked, change background color to purple
 
 
-    $('#change-me').click(function () {
-      $(this).toggleClass('heading');
+    $('#change-me').dblclick(function () {
+      $(this).css('background-color', 'purple');
     });
 
     //Input Cohort Name. When button is clicked text updates name of cohort
 
 
-    $('#cohort-name').click(function () {
-      var newTitle = $('#cohort-name').val();
-      $('#my-cohort').append($('#input'.val()))
+    $('#change-cohort').click(function () {
+      $('#my-cohort').text(
+        $('#cohort-name').val()
+      );
     });
-
-    //
-    // $('#change-cohort').click(function () {
-    // $('#my-cohort').append('<li>' + $('#input').val());
-    // });
-
-
 
 
     //Highlight button clicked, change background color of cohort name to yellow
-
+    //
     $('#highlight').click(function () {
       $('#my-cohort').css("background-color", "yellow");
     });
-
-    //Javascript changes background-color of the container to the pink 3 seconds
-
-    setTimeout(function(){
-      document.getElementById("container")[0]
+    //
+    //   //Javascript changes background-color of the container to the pink 3 seconds
+    //
+    setTimeout(function () {
+      document.getElementsByClassName("container")[0]
         .style.backgroundColor = "pink";
-    },3000);
-  });
-</script>
+    }, 5000);
+  })();
 
+
+</script>
 
 </body>
 </html>
