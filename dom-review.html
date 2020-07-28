@@ -5,9 +5,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script type=”text/javascript” src=https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js></script>
 
   <title>DOM Review</title>
 
@@ -43,53 +42,68 @@
   </div>
 </div>
 <!--<script src="js/jquery.js"></script>-->
-
-<script type=”text/javascript” src=https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js></script>
-
 <script>
-  "use strict";
-  (function () {
+ "use strict";
+ (function() {
 
 
-    //type in input, and append it to the list when clicked
-    $('#add-to-list').click(function () {
-      $('#favorite-food').append('<li>' + $('#input').val());
-    });
+   //type in input, and append it to the list when clicked
+   $('#add-to-list').click(function () {
+     $('#favorite-food').append('<li>' + $('#input').val());
+   });
 
 
-    //Heading Change me double clicked, change background color to purple
+   //Heading Change me double clicked, change background color to purple
 
 
-    $('#change-me').dblclick(function () {
-      $(this).css('background-color', 'purple');
-    });
+   $('#change-me').dblclick(function () {
+     $(this).css('background-color', 'purple');
+   });
 
-    //Input Cohort Name. When button is clicked text updates name of cohort
+   //Input Cohort Name. When button is clicked text updates name of cohort
 
 
-    $('#change-cohort').click(function () {
-      $('#my-cohort').text(
-        $('#cohort-name').val()
-      );
-    });
+   $('#change-cohort').click(function () {
+     $('#my-cohort').text(
+       $('cohort-name').val()
+     );
+   });
+
+
+ }();
+
 
 
     //Highlight button clicked, change background color of cohort name to yellow
-    //
-    $('#highlight').click(function () {
-      $('#my-cohort').css("background-color", "yellow");
-    });
-    //
-    //   //Javascript changes background-color of the container to the pink 3 seconds
-    //
-    setTimeout(function () {
-      document.getElementsByClassName("container")[0]
-        .style.backgroundColor = "pink";
-    }, 5000);
-  })();
+  //
+  //   $('#highlight').click(function () {
+  //     $('#my-cohort').css("background-color", "yellow");
+  //   });
+  //
+  //   //Javascript changes background-color of the container to the pink 3 seconds
+  //
+  //   setTimeout(function(){
+  //     document.getElementById("container")[0]
+  //       .style.backgroundColor = "pink";
+  //   },3000);
+  // });
+  //
+  // (function() {
+  //   var s = document.getElementById('titleTable').style,
+  //     f = false,
+  //     c1 = '#red',
+  //     c2 = '#red';
+  //
+  //   setInterval(function() {
+  //     s.backgroundColor = f ? c1 : c2;
+  //     s.color = f ? c2 : c1;
+  //     f = !f;
+  //   }, 500);
+  // })();
 
 
 </script>
+
 
 </body>
 </html>
