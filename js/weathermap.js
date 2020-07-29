@@ -105,7 +105,14 @@ $.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lon},${lat}.json`, {
   console.log(data);
 })
 }
-
+//
+// const geocode = function (searchInfo) {
+//   // Call/Query MapBox API to obtain the response object with the necessary map information
+//   $.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${searchInfo}.json`, {
+//     access_token: OpenWeatherKey,
+//     types: [ "place", "address" ]
+//   }).done(geocodeHandler);
+// }
 //Once you’ve acquired the new Latitude/Longitude after the marker has been moved,
 // you can make another AJAX call using those coordinates,
 // and send the resulting data as an argument into a separate function
