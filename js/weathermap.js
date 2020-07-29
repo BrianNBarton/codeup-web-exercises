@@ -105,6 +105,29 @@ $.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lon},${lat}.json`, {
   console.log(data);
 })
 }
+
+var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+  accessToken: mapboxgl.accessToken, // Set the access token
+  mapboxgl: mapboxgl, // Set the mapbox-gl instance
+  marker: false, // Do not use the default marker style
+
+});
+
+
+ geocoder.on("results", function(lat) {
+(lat.config.proximity[1], lat.config.proximity[0])
+   console.log("potato");
+   console.log(lat.config.proximity);
+console.log(lat);
+ });
+
+
+
+
+// Add the geocoder to the map
+map.addControl(geocoder);
+//
+// placeholder: 'Search for places in Berkeley
 //
 // const geocode = function (searchInfo) {
 //   // Call/Query MapBox API to obtain the response object with the necessary map information

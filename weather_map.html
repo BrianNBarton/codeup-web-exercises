@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="weathermap.css">
 
   <meta charset="UTF-8">
-  <title>First Mapbox Map</title>
+  <title>Weather Map</title>
   <!-- Mapbox CSS -->
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
   <!-- Custom CSS -->
@@ -117,7 +117,8 @@
 <!--///carosel end -->
 
 
-
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
 
 <div id='map' class="container-fluid justify-content-center"></div>
 <pre id="coordinates" class="coordinates"></pre>
@@ -137,6 +138,7 @@
 
 <script src="js/keys.js"></script>
 <script src="js/weathermap.js"></script>
+<script src="https://api.mapbox.com/geocoding/v5"></script>
 
 </body>
 </html>
