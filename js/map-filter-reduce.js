@@ -44,7 +44,7 @@ console.log(multiUsers);
 
 //   Use .map to create an array of strings where each element is a user's email address
 
-let iUsers = users.map(users => users.email);
+let iUsers = users.map(user => user.email);
 console.log(iUsers);
 
 // Use .reduce to get the total years of experience from the list of users.
@@ -54,24 +54,28 @@ console.log(iUsers);
 let totalYears = users.reduce((a, user) => a + user.yearsOfExperience, 0);
 console.log(totalYears);
 
+let avgYears = totalYears / users.length;
+console.log(avgYears);
 //   Use .reduce to get the longest email from the list of users.
-let longestEmail = users.reduce((a, user) => {
+let longestEmail = users.reduce((longest, user) => {
 
-  if(user.email.length > a.length)
+  if(user.email.length > longest.length)
     return user.email;
   else;
-  return a;
+  return longest;
 }, ``);
 
 console.log(longestEmail);
 //   Use .reduce to get the list of user's names in a single string. Example:
 //   Your instructors are: ryan, luis, zach, fernando, justin.
 
-let userNames = users.reduce((a, user) => {
-  a.push(user.name);
-  return a;
-}, []).join(`,`);
-
+let userNames = users.reduce((instructors, user, index, arr) => {
+  if (index === arr.length - 1) {
+    return `${instructors} ${user.name}`;
+  } else {
+    return `${instructors}`
+  }
+}, "your instructors are: " );
 console.log(userNames);
 
 //Bonus
