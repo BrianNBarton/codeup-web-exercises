@@ -1,0 +1,29 @@
+{
+  "name": "codeup-web-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sounds.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianNBarton/codeup-web-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianNBarton/codeup-web-exercises/issues"
+  },
+  "homepage": "https://github.com/BrianNBarton/codeup-web-exercises#readme",
+  "dependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.44.1"
+  }
+}
