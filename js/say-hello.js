@@ -1,5 +1,3 @@
-
-
-const moduleName = require('module-name');
-
-module.exports = 'Hello world';
+function sayHello() {
+  console.log('hello')
+}
