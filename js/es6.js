@@ -109,6 +109,7 @@ for (let person of developers) {
   console.log(`${person.name} is the ${person.role} of the family. ${Math.floor(Math.random() * 8)}`);
 }
 
+const sayHello = name => { 'Hello, ' + name + '!' }
 // developers.push`{name}`
 // TODO: Use `let` for the following variable
 let list = '<ul>';

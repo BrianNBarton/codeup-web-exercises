@@ -9,11 +9,12 @@
 
 <script>
 
-  fetch('https://opentdb.com/api.php?amount=100')
+  fetch('https://opentdb.com/api.php?amount=10')
    // fetch(`https://opentdb.com/api_token.php?command=reset&token=accessToken`)
   .then(res => res.json())
   .then(data => console.log(data))
   .catch(error => console.log('ERROR'))
+
 
 </script>
 </body>
