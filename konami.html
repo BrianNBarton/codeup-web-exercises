@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h1>Bepis for Cheems</h1>
+<h1>Konami!</h1>
 
 
 <head>
@@ -24,125 +24,92 @@
 
 </head>
 <body>
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 6</div>
-    <img src="img/26cyn25xja051.jpg" style="width:50%">
-    <div class="text">Doge play chess with cheems</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 6</div>
-    <img src="img/bepis.png" style="width:50%">
-    <div class="text">As you may well know, Doge love Bepis. They order pizza with Bepis.</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 6</div>
-    <img src="img/deliveryboiforgotbepis.jpg" style="width:50%">
-    <div class="text">Oh hecc, delivery boi forgot the bepis</div>
-  </div>
-
-
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 6</div>
-    <img src="img/triggered.webp" style="width:50%">
-    <div class="text">Oh Now you done it. Shibe is Triggered!!</div>
-  </div>
-
-
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 6</div>
-    <img src="img/protecattack.jpg" style="width:50%">
-    <div class="text">Armed to the teeth, delivery boy is sent back to retrieve the bepis</div>
-  </div>
-
-
-  <div class="mySlides fade">
-    <div class="numbertext">6 / 6</div>
-    <img src="img/drinkbepis.jpeg" style="width:50%">
-    <div class="text">The End</div>
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-  <span class="dot" onclick="currentSlide(6)"></span>
-</div>
-
-
 <script>
 
-  newAudio('.idea/Mario0-coin-sound.mp3')
+ //var audio = new Audio('.idea/Mario0-coin-sound.mp3') ;
 
+ if (e.keyCode == 38) {
+   var audio = new Audio('.idea/Mario0-coin-sound.mp3');
+   audio.play()
+  //
+ }
 
-  document.addEventListener('keydown', function (e) {
-    if (e.keyCode == 38) {
-      document.getElementById('audio').play();
-    }
-  });
+ function play() {
+   var audio = document.getElementById("audio");
 
   function onKonamiCode(cb) {
     var input = '';
-    var key = '3838404037393739666513';
+    var key = '38';//384040373937396665';
     document.addEventListener('keydown', function (e) {
       input += ("" + e.keyCode);
       if (input === key) {
         return cb();
-
-
       }
       if (!key.indexOf(input)) return;
       input = ("" + e.keyCode);
     });
   }
 
-  onKonamiCode(function () {
-    alert('30 lives!')
-  })
-
-
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-      slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-  }
+  onKonamiCode(function () {audio.play()})}
+  //
+  //
+  // document.addEventListener('keydown', function (e) {
+  //   if (e.keyCode === 38) {
+  //     document.getElementById('audio').play();
+  //   }
+  // });
+  //
+  // function onKonamiCode(cb) {
+  //   var input = '';
+  //   var key = '3838404037393739666513';
+  //   document.addEventListener('keydown', function (e) {
+  //     input += ("" + e.keyCode);
+  //     if (input === key) {
+  //       return cb();
+  //
+  //
+  //     }
+  //     if (!key.indexOf(input)) return;
+  //     input = ("" + e.keyCode);
+  //   });
+  // }
+  //
+  // onKonamiCode(function () {
+  //   alert('30 lives!')
+  // })
+  //
+  //
+  // var slideIndex = 1;
+  // showSlides(slideIndex);
+  //
+  // function plusSlides(n) {
+  //   showSlides(slideIndex += n);
+  // }
+  //
+  // function currentSlide(n) {
+  //   showSlides(slideIndex = n);
+  // }
+  //
+  // function showSlides(n) {
+  //   let i;
+  //   const slides = document.getElementsByClassName("mySlides");
+  //   const dots = document.getElementsByClassName("dot");
+  //   if (n > slides.length) {
+  //     slideIndex = 1
+  //   }
+  //   if (n < 1) {
+  //     slideIndex = slides.length
+  //   }
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex - 1].style.display = "block";
+  //   dots[slideIndex - 1].className += " active";
+  //
+  // }
 
 
 </script>
