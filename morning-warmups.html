@@ -138,16 +138,36 @@
 //   num += 2;
 //   console.log(num);
 //   num += 2;
-//
-//
-//   function printEvens() {
-//     for (var i = 1; i <= 20; i++) {
-//       if (i % 2 === 0)
-//         console.log(i);
-//     }
-//     printEvens();
-//
-//
+
+
+  function printEvens() {
+    for (var i = 1; i <= 20; i++) {
+      if (i % 2 === 0)
+        console.log(i);
+    }
+  }
+  for(var i in nums) {
+    totalSum += nums[i];
+  }
+
+  for(var i in nums) {
+    totalSum += nums[i];
+  }
+  //Work out how many numbers are
+  //in our array.
+  var numsCnt = nums.length;
+
+  //Finally, get the average.
+  var average = totalSum / numsCnt;
+
+  //Print the median / average to the console.
+  //In this case, the average is 7.
+  console.log('Average is: ' + average);
+
+
+  //find the average in an array
+
+
 //     const countFromBy = countFromBy(num1, num2)
 //     {
 //       console.log(num1);
@@ -370,55 +390,55 @@
   //
   // fizzBuzz(30);
 
-
-  const hamsters = [
-    {
-      name: "Hamtaro",
-      heightInMM: 86,
-      fur: ['orange', 'white'],
-      gender: "male",
-      dateOfBirth: "August 6"
-    }, {
-      name: "Bijou",
-      heightInMM: 75,
-      fur: ['white'],
-      gender: "female",
-      dateOfBirth: "July 10"
-    }, {
-      name: "Oxnard",
-      heightInMM: 100,
-      fur: ['grey', 'white'],
-      gender: "male",
-      dateOfBirth: "May 3"
-    }, {
-      name: "Boss",
-      heightInMM: 120,
-      fur: ['brown', 'white'],
-      gender: "male",
-      dateOfBirth: "Spetember 21"
-    }, {
-      name: "Snoozer",
-      heightInMM: 85,
-      fur: ['brown', 'white', "pink"],
-      gender: "male",
-      dateOfBirth: "January 14"
-    }
-  ];
+  //
+  // const hamsters = [
+  //   {
+  //     name: "Hamtaro",
+  //     heightInMM: 86,
+  //     fur: ['orange', 'white'],
+  //     gender: "male",
+  //     dateOfBirth: "August 6"
+  //   }, {
+  //     name: "Bijou",
+  //     heightInMM: 75,
+  //     fur: ['white'],
+  //     gender: "female",
+  //     dateOfBirth: "July 10"
+  //   }, {
+  //     name: "Oxnard",
+  //     heightInMM: 100,
+  //     fur: ['grey', 'white'],
+  //     gender: "male",
+  //     dateOfBirth: "May 3"
+  //   }, {
+  //     name: "Boss",
+  //     heightInMM: 120,
+  //     fur: ['brown', 'white'],
+  //     gender: "male",
+  //     dateOfBirth: "Spetember 21"
+  //   }, {
+  //     name: "Snoozer",
+  //     heightInMM: 85,
+  //     fur: ['brown', 'white', "pink"],
+  //     gender: "male",
+  //     dateOfBirth: "January 14"
+  //   }
+  // ];
 
   //use reduce to return the tallest
-  let tallestHamHam = hamsters.reduce((tallHamster, hamham) => {
-
-    if(hamham.heightInMM > tallHamster.heightInMM){
-      return hamham;
-    } else
-    {
-      return tallHamster;
-    }
-  }, {heightInMM: 0});
-
-  console.log(tallestHamHam);
-
-
+  // let tallestHamHam = hamsters.reduce((tallHamster, hamham) => {
+  //
+  //   if(hamham.heightInMM > tallHamster.heightInMM){
+  //     return hamham;
+  //   } else
+  //   {
+  //     return tallHamster;
+  //   }
+  // }, {heightInMM: 0});
+  //
+  // console.log(tallestHamHam);
+  //
+  //
 
 
 
